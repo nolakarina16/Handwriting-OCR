@@ -1,0 +1,68 @@
+body {
+    background-image: url("background.gif");
+    background-color: #FF5A89;
+    background-size: cover;
+    color: #4E5466;
+    margin: 0;
+}
+
+.upload-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.upload-section {
+    width: 65%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin: auto auto;
+    border-radius: 5px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+#upload-form {
+    top:50%;
+    position: relative;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn {
+    border-radius: 5px;
+    color: #FE0031;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px dashed #FE0031;
+    background: inherit;
+}
+
+.custom-file-upload {
+    padding: 6px 12px;
+}
+
+.btn-submit {
+    padding: 6px 12px;
+}
+
+#upload-file-name {
+    border: none;
+    pointer-events: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

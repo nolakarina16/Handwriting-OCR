@@ -1,0 +1,58 @@
+body {
+    background-image: url("background.gif");
+    background-color: #FF5A89;
+    background-size: cover;
+    color: #4E5466;
+    margin: 0;
+}
+
+.card-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card {
+    width: 75%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px auto;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 25px;
+}
+
+.card-content {
+    top:25%;
+    position: relative;
+    text-align: center;
+}
+
+img {
+    width: 75%;
+    max-height: 600px;
+    border-radius: 5px;
+    color: #3c9fd0;
+    display: inline-block;
+    border: 1px dashed #0b79d0;
+    object-fit: contain;
+}
+
+.back-btn {
+    text-align: left;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

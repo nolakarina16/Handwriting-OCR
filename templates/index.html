@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>OCR</title>
+
+</head>
+<body>
+    <div class="upload-wrapper">
+        <div class="upload-section">
+            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                <h1 class="noselect">Optical Character Recognition</h1>
+                <label id="upload-label" for="file-upload" class="custom-file-upload btn noselect">
+                    <i class="fas fa-upload icon"></i> Browse
+                </label>
+
+                <input id="file-upload" placeholder="" type="file" name="file" accept="image/png" multiple>
+
+                <p id="file-upload-name" class="noselect"></p>
+
+                <button id="submit" type="submit" class="btn-submit btn noselect">
+                    <i class="far fa-eye icon"></i>  Recognize
+                </button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById("submit").style.display = "none";
+        document.getElementById("file-upload").onchange = function() {
+            document.getElementById("submit").style.display = "inline-block";
+            document.getElementById("upload-label").style.display = "none";
+            document.getElementById("file-upload-name").innerHTML = this.value;
+        };
+    </script>
+</body>
+</html>

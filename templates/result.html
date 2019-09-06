@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/result.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>OCR</title>
+</head>
+<body>
+    <div class="card-wrapper">
+        <div class="card">
+            <a href="/"><i class="fas fa-chevron-left back-btn noselect"></i></a>
+            <div class="card-content">
+                <h1 class="noselect">Result</h1>
+                {% if image_name %}
+                    <img src={{ "/static/images/"+image_name }} alt="UploadedImage" height="200px" width="480px">
+                {% else %}
+                    <h1>Upload failed</h1>
+                {% endif %}
+                <p class="recognized-text">Recognized text:</p>
+                <p>{{ textData | safe}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
